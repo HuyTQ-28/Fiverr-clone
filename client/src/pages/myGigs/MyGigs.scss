@@ -1,0 +1,200 @@
+.myGigs {
+  display: flex;
+  justify-content: center;
+  color: #555;
+
+  .container {
+    width: 1320px;
+    padding: 50px 0px;
+
+    .title {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+
+      h1 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 30px;
+        font-weight: 600;
+        color: rgb(34, 35, 37);
+      }
+
+      button {
+        background-color: #1dbf73;
+        color: white;
+        font-weight: 500;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 4px;
+        font-family: "Montserrat", sans-serif;
+        font-size: 14px;
+        &:hover {
+          background-color: #1dbf73b9;
+        }
+      }
+    }
+
+    .filters {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+
+      span {
+        margin-right: 10px;
+        font-weight: 600;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      select {
+        padding: 8px;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+        background-color: white;
+        min-width: 180px;
+        font-family: "Montserrat", sans-serif;
+      }
+    }
+
+    .loading,
+    .error {
+      text-align: center;
+      padding: 20px;
+      font-size: 18px;
+    }
+
+    .error {
+      color: #d1454a;
+    }
+
+    .no-gigs {
+      text-align: center;
+      padding: 40px;
+      background-color: #f5f5f5;
+      border-radius: 8px;
+
+      p {
+        margin-bottom: 20px;
+        font-size: 18px;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      button {
+        background-color: #1dbf73;
+        color: white;
+        font-weight: 500;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 4px;
+        font-family: "Montserrat", sans-serif;
+        &:hover {
+          background-color: #1dbf73b9;
+        }
+      }
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+
+      th {
+        text-align: left;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        font-weight: 500;
+      }
+
+      tr {
+        td {
+          padding: 15px 10px;
+          border-bottom: 1px solid #f5f5f5;
+
+          .image {
+            width: 80px;
+            height: 45px;
+            object-fit: cover;
+            border-radius: 4px;
+          }
+
+          .status-badge {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+            text-transform: capitalize;
+
+            &.active {
+              background-color: #e7f7ee;
+              color: #1dbf73;
+            }
+
+            &.paused {
+              background-color: #fff8e7;
+              color: #ffb836;
+            }
+
+            &.draft {
+              background-color: #f5f5f5;
+              color: #777;
+            }
+
+            &.pending {
+              background-color: #e7f1ff;
+              color: #4a85f6;
+            }
+
+            &.denied {
+              background-color: #ffe7e7;
+              color: #d1454a;
+            }
+          }
+        }
+
+        .actions {
+          display: flex;
+          gap: 8px;
+
+          button {
+            border: none;
+            padding: 6px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 500;
+
+            &.edit {
+              background-color: #f5f5f5;
+              color: #555;
+            }
+
+            &.pause {
+              background-color: #fff8e7;
+              color: #ffb836;
+            }
+
+            &.activate,
+            &.publish {
+              background-color: #e7f7ee;
+              color: #1dbf73;
+            }
+
+            &.delete {
+              background-color: #ffe7e7;
+              color: #d1454a;
+            }
+
+            &:hover {
+              opacity: 0.8;
+            }
+          }
+        }
+
+        &:hover {
+          background-color: #fafafa;
+        }
+      }
+    }
+  }
+}

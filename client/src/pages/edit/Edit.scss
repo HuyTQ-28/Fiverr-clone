@@ -1,0 +1,50 @@
+.add {
+  .current-image,
+  .current-images {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #e4e5e7;
+    border-radius: 4px;
+    background: #f9f9f9;
+
+    img {
+      max-width: 100%;
+      max-height: 150px;
+      object-fit: cover;
+      border-radius: 4px;
+      margin-bottom: 5px;
+    }
+
+    span {
+      display: block;
+      font-size: 13px;
+      color: #777;
+      margin-top: 5px;
+    }
+  }
+
+  .current-images {
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+
+      img {
+        max-width: 150px;
+        max-height: 100px;
+      }
+    }
+  }
+
+  .loading,
+  .error {
+    text-align: center;
+    padding: 40px;
+    font-size: 18px;
+  }
+
+  .error {
+    color: #d1454a;
+  }
+}

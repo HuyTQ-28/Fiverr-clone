@@ -1,0 +1,242 @@
+.review {
+  background-color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.05);
+  font-family: "Montserrat", sans-serif;
+  transition: transform 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .review-loading {
+    font-size: 14px;
+    color: #74767e;
+    padding: 15px;
+
+    .skeleton-user {
+      height: 48px;
+      width: 100%;
+      max-width: 200px;
+      background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+      background-size: 200% 100%;
+      animation: loading 1.5s infinite;
+      border-radius: 24px;
+      margin-bottom: 20px;
+    }
+
+    .skeleton-content {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      .skeleton-line {
+        height: 16px;
+        width: 100%;
+        background: linear-gradient(
+          90deg,
+          #f0f0f0 25%,
+          #e0e0e0 50%,
+          #f0f0f0 75%
+        );
+        background-size: 200% 100%;
+        animation: loading 1.5s infinite;
+        border-radius: 4px;
+
+        &:last-child {
+          width: 70%;
+        }
+      }
+    }
+  }
+
+  .review-error {
+    font-size: 14px;
+    color: #74767e;
+    padding: 15px;
+    background-color: #fff0f0;
+    border-radius: 4px;
+    border-left: 3px solid #e05151;
+  }
+
+  .user-unknown {
+    font-size: 14px;
+    color: #74767e;
+    margin: 10px 0;
+    padding: 8px 12px;
+    background-color: #f8f8f8;
+    border-left: 3px solid #ccc;
+    border-radius: 4px;
+    font-style: italic;
+  }
+
+  .user {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    position: relative;
+
+    .profile-pic {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .user-info {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+
+      .username {
+        font-weight: 600;
+        font-size: 16px;
+        color: #222325;
+        letter-spacing: -0.1px;
+      }
+
+      .user-country {
+        display: flex;
+        align-items: center;
+        color: #74767e;
+        font-size: 14px;
+        gap: 8px;
+
+        .verified-badge {
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          color: #1dbf73;
+          font-size: 13px;
+          font-weight: 500;
+
+          svg {
+            stroke-width: 2;
+          }
+        }
+      }
+    }
+  }
+
+  .review-content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-left: 5px;
+
+    .stars {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+
+      svg {
+        font-size: 17px;
+        color: #b5b6ba;
+        stroke-width: 1;
+
+        &.filled {
+          color: #ffb33e;
+          fill: #ffb33e;
+        }
+      }
+
+      .review-score {
+        margin-left: 6px;
+        font-weight: 600;
+        color: #404145;
+        font-size: 15px;
+      }
+
+      .review-time {
+        margin-left: auto;
+        font-size: 14px;
+        color: #74767e;
+      }
+    }
+
+    .review-date {
+      font-size: 14px;
+      color: #74767e;
+      margin-top: -5px;
+      margin-bottom: 0;
+    }
+
+    .review-text {
+      line-height: 1.6;
+      color: #404145;
+      margin: 6px 0;
+      font-size: 15px;
+      position: relative;
+      padding-left: 2px;
+    }
+
+    .helpful {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-top: 10px;
+      padding-top: 15px;
+      border-top: 1px solid #f5f5f5;
+
+      span {
+        font-size: 14px;
+        color: #74767e;
+      }
+
+      .buttons {
+        display: flex;
+        gap: 10px;
+
+        button {
+          border: 1px solid #e4e5e7;
+          background-color: white;
+          padding: 6px 14px;
+          border-radius: 4px;
+          font-size: 14px;
+          color: #404145;
+          cursor: pointer;
+          transition: all 0.2s;
+          font-weight: 500;
+
+          &:hover {
+            background-color: #f5f5f5;
+            border-color: #c5c6c9;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+// Media query for responsive design
+@media (max-width: 768px) {
+  .review {
+    padding: 16px;
+
+    .user {
+      gap: 10px;
+      margin-bottom: 15px;
+
+      .profile-pic {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+}

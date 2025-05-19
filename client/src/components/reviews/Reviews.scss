@@ -1,0 +1,226 @@
+.reviews {
+  margin-top: 10px;
+  width: 853.338px;
+  margin: 0 auto;
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #404145;
+  }
+
+  .reviews-loading,
+  .reviews-error {
+    font-size: 14px;
+    color: #74767e;
+    padding: 15px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    margin-bottom: 30px;
+  }
+
+  .reviews-summary {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #e4e5e7;
+    border-radius: 8px;
+
+    .rating-avg {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      .avg-value {
+        font-size: 48px;
+        font-weight: 700;
+        color: #ffb33e;
+      }
+
+      .stars {
+        display: flex;
+        align-items: center;
+
+        svg {
+          font-size: 18px;
+          color: #b5b6ba;
+          stroke-width: 1;
+          margin-right: 2px;
+
+          &.filled {
+            color: #ffb33e;
+            fill: #ffb33e;
+          }
+        }
+      }
+
+      .reviews-count {
+        color: #74767e;
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .reviews-list {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .no-reviews {
+    padding: 40px 0;
+    color: #74767e;
+    font-size: 16px;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #e4e5e7;
+    border-radius: 8px;
+    margin-bottom: 30px;
+  }
+
+  .add {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #e4e5e7;
+    width: 853.338px;
+    box-sizing: border-box;
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 20px;
+    }
+
+    .error-message {
+      background-color: #ffecec;
+      color: #e74c3c;
+      padding: 10px 15px;
+      border-radius: 4px;
+      font-size: 14px;
+      margin-bottom: 15px;
+      border-left: 3px solid #e74c3c;
+    }
+
+    .login-to-review,
+    .already-reviewed {
+      background-color: #f8f8f8;
+      padding: 20px;
+      border-radius: 4px;
+      margin: 20px 0;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+
+      .icon {
+        font-size: 24px;
+        color: #74767e;
+      }
+
+      p {
+        color: #74767e;
+        font-size: 16px;
+      }
+    }
+
+    .already-reviewed {
+      background-color: #f0f7ff;
+      border-left: 3px solid #3498db;
+
+      p {
+        color: #3498db;
+      }
+    }
+
+    .addForm {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+
+      textarea {
+        padding: 15px;
+        border: 1px solid #e4e5e7;
+        border-radius: 4px;
+        font-size: 16px;
+        min-height: 120px;
+        resize: vertical;
+        font-family: inherit;
+        transition: border-color 0.2s;
+        width: 100%;
+        box-sizing: border-box;
+
+        &:focus {
+          outline: none;
+          border-color: rgb(34, 35, 37);
+        }
+
+        &:disabled {
+          background-color: #f5f5f5;
+          cursor: not-allowed;
+          border-color: #e0e0e0;
+        }
+      }
+
+      .stars {
+        display: flex;
+        gap: 5px;
+
+        .star {
+          font-size: 35px;
+          color: #e4e5e7;
+          cursor: pointer;
+          transition: color 0.2s;
+          user-select: none;
+
+          &:hover {
+            color: #ffb33e;
+          }
+
+          &.filled {
+            color: #ffb33e;
+          }
+
+          &.disabled {
+            cursor: not-allowed;
+            opacity: 0.5;
+
+            &:hover {
+              color: #e4e5e7;
+            }
+
+            &.filled {
+              color: #ffb33e;
+              opacity: 0.7;
+            }
+          }
+        }
+      }
+
+      button {
+        align-self: flex-start;
+        background-color: rgb(34, 35, 37);
+        color: white;
+        border: none;
+        padding: 10px 24px;
+        border-radius: 4px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.2s;
+
+        &:hover {
+          background-color: rgb(34, 35, 37);
+        }
+
+        &:disabled {
+          background-color: #e4e5e7;
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+}

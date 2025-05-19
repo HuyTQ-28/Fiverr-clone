@@ -1,0 +1,148 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  color: #666;
+  margin: 40px 0px;
+  padding: 30px 0;
+  font-family: "Montserrat", sans-serif;
+  border-top: 1px solid #ebe9e9;
+
+  img {
+    width: 22px;
+    height: 22px;
+  }
+
+  .container {
+    max-width: 1330px;
+    width: 100%;
+    padding: 0 5px;
+    box-sizing: border-box;
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      .item {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        h2 {
+          font-family: "Montserrat", sans-serif;
+          font-size: 18px;
+          color: #222;
+          font-weight: 600;
+          margin-bottom: 5px;
+        }
+        span {
+          font-family: "Montserrat", sans-serif;
+          font-weight: 500;
+          font-size: 15px;
+          cursor: pointer;
+          &:hover {
+            color: #1dbf73;
+          }
+        }
+      }
+    }
+
+    hr {
+      margin: 40px 0px;
+      height: 0;
+      border: 1px solid #ebe9e9;
+    }
+    .bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .left {
+        width: max-content;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        img {
+          width: 80px;
+          height: auto;
+        }
+
+        span {
+          font-size: 15px;
+          white-space: nowrap;
+        }
+      }
+      .right {
+        width: max-content;
+        display: flex;
+        align-items: center;
+        gap: 25px;
+
+        .social {
+          display: flex;
+          gap: 16px;
+
+          img {
+            cursor: pointer;
+            &:hover {
+              opacity: 0.8;
+            }
+          }
+        }
+
+        .link {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          font-size: 15px;
+          cursor: pointer;
+
+          &:hover {
+            color: #1dbf73;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Responsive styles
+@media (max-width: 1200px) {
+  .footer .container .top {
+    flex-wrap: wrap;
+    gap: 25px;
+
+    .item {
+      width: 30%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer .container {
+    .top {
+      .item {
+        width: 45%;
+      }
+    }
+
+    .bottom {
+      flex-direction: column;
+      gap: 20px;
+
+      .left,
+      .right {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .footer .container .top {
+    flex-direction: column;
+
+    .item {
+      width: 100%;
+    }
+  }
+}

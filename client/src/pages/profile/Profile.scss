@@ -1,0 +1,301 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+
+.profile {
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+  background-color: #f8f9fa;
+  min-height: calc(100vh - 100px);
+  font-family: "Montserrat", sans-serif;
+  color: #333;
+
+  .container {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 30px;
+      color: #333;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-align: center;
+    }
+
+    .profile-content {
+      background-color: white;
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+      border: 1px solid #eaeaea;
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+
+        .profile-image {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 30px;
+          margin-bottom: 20px;
+          padding-bottom: 30px;
+          border-bottom: 1px solid #eaeaea;
+
+          img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #e0e0e0;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+
+            &:hover {
+              transform: scale(1.05);
+              box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+            }
+          }
+
+          .upload-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .custom-file-upload {
+              display: inline-block;
+              padding: 10px 20px;
+              cursor: pointer;
+              background-color: #f0f0f0;
+              border-radius: 6px;
+              font-size: 14px;
+              font-weight: 500;
+              color: #555;
+              border: 1px solid #ddd;
+              transition: all 0.3s ease;
+              text-align: center;
+
+              &:hover {
+                background-color: #e6e6e6;
+                border-color: #ccc;
+              }
+            }
+
+            input[type="file"] {
+              display: none;
+            }
+          }
+        }
+
+        .form-group {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          label {
+            font-size: 14px;
+            font-weight: 600;
+            color: #555;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+          }
+
+          input,
+          textarea {
+            padding: 14px 16px;
+            background-color: #f9f9f9;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            font-size: 15px;
+            font-family: "Montserrat", sans-serif;
+            color: #333;
+            transition: all 0.2s ease;
+
+            &:focus {
+              outline: none;
+              border-color: #a0a0a0;
+              box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05);
+            }
+
+            &::placeholder {
+              color: #aaa;
+              font-family: "Montserrat", sans-serif;
+            }
+          }
+
+          textarea {
+            resize: vertical;
+            min-height: 120px;
+          }
+        }
+
+        .skills-section {
+          .skill-input-container {
+            display: flex;
+            gap: 10px;
+
+            input {
+              flex: 1;
+            }
+
+            .add-skill-btn {
+              padding: 10px 20px;
+              background-color: #1a1a1a;
+              color: white;
+              border: none;
+              border-radius: 6px;
+              cursor: pointer;
+              font-weight: 500;
+              font-family: "Montserrat", sans-serif;
+              transition: all 0.3s ease;
+              letter-spacing: 0.5px;
+
+              &:hover {
+                background-color: #333;
+                transform: translateY(-2px);
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+              }
+
+              &:active {
+                transform: translateY(0);
+              }
+            }
+          }
+
+          .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+
+            .skill-tag {
+              display: flex;
+              align-items: center;
+              background-color: #f0f0f0;
+              padding: 8px 16px;
+              border-radius: 20px;
+              font-size: 14px;
+              color: #555;
+              border: 1px solid #e0e0e0;
+              transition: all 0.2s ease;
+
+              &:hover {
+                background-color: #e8e8e8;
+                border-color: #d0d0d0;
+              }
+
+              button {
+                background: none;
+                border: none;
+                font-size: 18px;
+                cursor: pointer;
+                margin-left: 8px;
+                color: #888;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.2s ease;
+
+                &:hover {
+                  color: #ff5252;
+                }
+              }
+            }
+          }
+        }
+
+        .error-message {
+          padding: 12px 16px;
+          background-color: rgba(244, 67, 54, 0.1);
+          color: #f44336;
+          border-radius: 6px;
+          font-size: 14px;
+          border-left: 3px solid #f44336;
+        }
+
+        .success-message {
+          padding: 12px 16px;
+          background-color: rgba(100, 100, 100, 0.1);
+          color: #444;
+          border-radius: 6px;
+          font-size: 14px;
+          border-left: 3px solid #666;
+        }
+
+        .save-btn {
+          padding: 14px 30px;
+          background-color: #1a1a1a;
+          color: white;
+          border: none;
+          border-radius: 6px;
+          font-size: 16px;
+          font-weight: 600;
+          font-family: "Montserrat", sans-serif;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          margin-top: 20px;
+          letter-spacing: 0.5px;
+          align-self: center;
+          min-width: 200px;
+
+          &:hover {
+            background-color: #333;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+          }
+
+          &:active {
+            transform: translateY(-1px);
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+          }
+
+          &:disabled {
+            background-color: #aaa;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .profile {
+    .container {
+      padding: 0 15px;
+
+      h1 {
+        font-size: 28px;
+      }
+
+      .profile-content {
+        padding: 25px;
+
+        form {
+          gap: 20px;
+
+          .profile-image {
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 20px;
+
+            img {
+              width: 100px;
+              height: 100px;
+              margin-bottom: 15px;
+            }
+          }
+
+          .save-btn {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
